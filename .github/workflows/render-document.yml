@@ -16,7 +16,7 @@ jobs:
       run: docker pull stephenvertex/pandoc-ubuntu:latest
 
     - name: Run render
-      run: docker run -it --rm -v `pwd`:/wdir --workdir /wdir pandoc-ubuntu:latest ./render.sh
+      run: docker run --rm -v `pwd`:/wdir --workdir /wdir pandoc-ubuntu:latest ./render.sh
 
     - uses: actions/upload-artifact@v1
       with:
